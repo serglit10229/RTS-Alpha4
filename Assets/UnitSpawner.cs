@@ -20,7 +20,7 @@ public class UnitSpawner : MonoBehaviour {
 
     void Update()
     {
-        for(int i; i > 0)
+		for(int i = 0;i < unitAmount;i++)
         { 
             prodTime -= Time.deltaTime;
             if (prodTime < 0)
@@ -45,7 +45,10 @@ public class UnitSpawner : MonoBehaviour {
         unit.GetComponent<NavMeshAgent>().enabled = false;
 
         unit.GetComponent<NavMeshAgent>().enabled = true;
-        
-        
     }
+
+	public void SpawnUI()
+	{
+		unitAmount++;
+	}
 }
