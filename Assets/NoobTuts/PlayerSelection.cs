@@ -26,10 +26,12 @@ public class PlayerSelection : MonoBehaviour {
 		if (BotFactoryT1 == true && !BotT1UI.activeSelf) 
 		{
 			BotT1UI.SetActive(true);
+			BotT1UI.GetComponent<ButtonController> ().Factory = gameObject;
 		}
 		if (TankFactoryT1 == true && !TankT1UI.activeSelf) 
 		{
 			TankT1UI.SetActive(true);
+			TankT1UI.GetComponent<ButtonController> ().Factory = gameObject;
 		}
     }
     
@@ -42,10 +44,12 @@ public class PlayerSelection : MonoBehaviour {
 		if (BotFactoryT1 == true && BotT1UI.activeSelf) 
 		{
 			BotT1UI.SetActive(false);
+			BotT1UI.GetComponent<ButtonController> ().Factory = null;
 		}
 		if (TankFactoryT1 == true && !TankT1UI.activeSelf) 
 		{
 			TankT1UI.SetActive(true);
+			TankT1UI.GetComponent<ButtonController> ().Factory = null;
 		}
     }
 }

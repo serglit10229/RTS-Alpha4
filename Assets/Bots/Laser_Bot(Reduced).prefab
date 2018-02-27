@@ -1154,7 +1154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 1125951142783896}
-  tc: {fileID: 0}
+  BotFactoryT1: 0
+  TankFactoryT1: 0
+  BotT1UI: {fileID: 0}
+  TankT1UI: {fileID: 0}
 --- !u!136 &136223537672136512
 CapsuleCollider:
   m_ObjectHideFlags: 1

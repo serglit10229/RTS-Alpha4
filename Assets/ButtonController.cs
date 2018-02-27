@@ -6,28 +6,39 @@ using UnityEngine;
 public class ButtonController : MonoBehaviour {
 
     
-	public GameObject Bot1;
-    public GameObject Bot2;
-    public GameObject Bot3;
-    public GameObject Bot4;
-    public GameObject Bot5;
-    public GameObject Bot6;
-    public GameObject Bot7;
-    public GameObject Bot8;
-    public GameObject Bot9;
-    public GameObject Bot10;
-    
+	public bool But1 = false;
+	public bool But1 = false;
+	public bool But1 = false;
+	public bool Unit4 = false;
+	public bool Unit5 = false;
+	public bool Unit6 = false;
+	public bool Unit7 = false;
+	public bool Unit8 = false;
+	public bool Unit9 = false;
+	public bool Unit10 = false;
 
 	public bool BotFactoryT1 = false;
 	public bool TankFactoryT1 = false;
 
-	// Use this for initialization
-	void Start () {
+	public GameObject Factory;
 
+	// Use this for initialization
+	void Update () {
+		if (Factory != null) {
+			/*
+			if (Unit1.GetComponent<Button> ().onClick) {
+				Factory.GetComponent<UnitSpawner> ().SpawnUnitBot1 ();
+			}
+			if (Unit2.GetComponent<Button> ().onClick) {
+				Factory.GetComponent<UnitSpawner> ().SpawnUnitBot1 ();
+			}
+			if (Unit3.GetComponent<Button> ().onClick) {
+				Factory.GetComponent<UnitSpawner> ().SpawnUnitBot1 ();
+			}
+			if (Unit4.GetComponent<Button> ().onClick) {
+				Factory.GetComponent<UnitSpawner> ().SpawnUnitBot1 ();
+			}
+			*/
+		}
 	}
-	
-	// Update is called once per frame
-	public void ChangeButton(GameObject factrory) {
-		Bot1.gameObject.GetComponent<Button>().colors = ColorBlock.defaultColorBlock;
-    }
 }

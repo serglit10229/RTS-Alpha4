@@ -18,21 +18,21 @@ public class UnitSpawner : MonoBehaviour {
     float prodTime = 5f;
     public int unitAmount = 0;
 
-    void Update()
+    void SpawnUnit()
     {
 		for(int i = 0;i < unitAmount;i++)
         { 
             prodTime -= Time.deltaTime;
             if (prodTime < 0)
             {
-                SpawnUnit();
+                SpawnUnitBot1();
                 unitAmount--;
             }
         }
         
     }
 
-    public void SpawnUnit()
+    public void SpawnUnitBot1()
     {
         
         // start new animation
