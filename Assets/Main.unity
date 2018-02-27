@@ -15513,7 +15513,7 @@ GameObject:
   - component: {fileID: 234306978}
   - component: {fileID: 234306980}
   m_Layer: 5
-  m_Name: BotFactoryT1
+  m_Name: BotFactoryT1 UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15591,17 +15591,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77690731f05e4cd4a4627c87c1a1a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  butList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Bot1: {fileID: 0}
+  Bot2: {fileID: 0}
+  Bot3: {fileID: 0}
+  Bot4: {fileID: 0}
+  Bot5: {fileID: 0}
+  Bot6: {fileID: 0}
+  Bot7: {fileID: 0}
+  Bot8: {fileID: 0}
+  Bot9: {fileID: 0}
+  Bot10: {fileID: 0}
+  BotFactoryT1: 1
+  TankFactoryT1: 0
 --- !u!1 &234337979
 GameObject:
   m_ObjectHideFlags: 0
