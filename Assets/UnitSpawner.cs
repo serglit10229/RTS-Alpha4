@@ -2,9 +2,10 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
 
-public class UnitSpawner : MonoBehaviour {
+public class UnitSpawner : MonoBehaviour
+{
     // unit prefab
-    public GameObject unit;
+    //public GameObject unit;
     public float spawnRange = 1.5f;
 
     public float x = 0.075f;
@@ -15,40 +16,39 @@ public class UnitSpawner : MonoBehaviour {
     public float speed2 = 0.2f;
 
     public bool allowSpawn = false;
-    float prodTime = 5f;
     public int unitAmount = 0;
+    //public float prodTime = 0.0f;
 
-    void SpawnUnit()
+    //PRODUCTION
+    public GameObject unit;
+    public float prodTime = 0.0f;
+    //public int unitRequestAmount = 0;
+
+    float prevTime = 0.0f;
+
+    private void Update()
     {
-		for(int i = 0;i < unitAmount;i++)
-        { 
+        for (int i = 0; i < unitAmount; i++)
+        {
+            Debug.Log("Units To Make: " + unitAmount);
             prodTime -= Time.deltaTime;
             if (prodTime < 0)
             {
-                SpawnUnitBot1();
+                Debug.Log("Unit Spawned");
+                Vector3 pos = transform.position;
+
+                Instantiate(unit, new Vector3(x + pos.x, y + pos.y, z + pos.z), Quaternion.Euler(0.0f, 0.0f, 0.0f));
+                unit.GetComponent<NavMeshAgent>().enabled = false;
+
+                unit.GetComponent<NavMeshAgent>().enabled = true;
                 unitAmount--;
+                prodTime = prevTime;
             }
         }
-        
     }
-
-    public void SpawnUnitBot1()
+    public void UnitRequest(int unitRequestAmount)
     {
-        
-        // start new animation
-        //GetComponent<PlayCurve>().Toggle();
-
-        // create a new unit at some random position around this place
-        Vector3 pos = transform.position;
-
-        Instantiate(unit, new Vector3(x + pos.x, y + pos.y, z + pos.z), Quaternion.Euler(0.0f, 0.0f, 0.0f));
-        unit.GetComponent<NavMeshAgent>().enabled = false;
-
-        unit.GetComponent<NavMeshAgent>().enabled = true;
+        prevTime = prodTime;
+        unitAmount += unitRequestAmount;
     }
-
-	public void SpawnUI()
-	{
-		unitAmount++;
-	}
 }
