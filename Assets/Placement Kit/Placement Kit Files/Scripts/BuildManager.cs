@@ -29,6 +29,8 @@ public class BuildManager: MonoBehaviour
 	public int SelectedBuilding;
 	private int LastSelectedBuilding;
 	public GameObject[] Building;
+
+	PlayerSelection ps;
 	
 	public List<BuildingList> buildings = new List<BuildingList>();
 	
@@ -58,11 +60,13 @@ public class BuildManager: MonoBehaviour
     public void ActivateBuildingmode()
     {
         isBuildingEnabled = true;
+		ps.allowSelect = false;
     }
 
     public void DeactivateBuildingmode()
     {
         isBuildingEnabled = false;
+		ps.allowSelect = true;
     }
 
     public void SelectBuilding(int id)

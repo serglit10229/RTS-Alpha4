@@ -1156,6 +1156,8 @@ MonoBehaviour:
   circle: {fileID: 1125951142783896}
   BotFactoryT1: 0
   TankFactoryT1: 0
+  allowStuff: 1
+  allowSelect: 1
   BotT1UI: {fileID: 0}
   TankT1UI: {fileID: 0}
 --- !u!136 &136223537672136512

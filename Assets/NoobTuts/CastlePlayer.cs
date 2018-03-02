@@ -4,7 +4,7 @@ using System.Collections;
 public class CastlePlayer : MonoBehaviour {
     // Note: OnMouseDown only works if object has a collider
     public GameObject BuildGuide;
-
+	public bool built = false;
 
     public bool overlap = false;
     void OnMouseDown() {
